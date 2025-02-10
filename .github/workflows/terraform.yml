@@ -42,12 +42,13 @@
 #       with:
 #         cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
 
-name: 'Terraform'
+name: 'Deploy to Terraform'
 
 on:
-  push:
-    branches: [ "master" ]
-  pull_request:
+  workflow_run:
+    workflows: ["Linting"]
+    types:
+      - completed
 
 permissions:
   contents: read
