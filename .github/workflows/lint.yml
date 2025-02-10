@@ -1,0 +1,21 @@
+name: Linting
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Run Linting
+      run: |
+        # Add your linting commands here
+        echo "Running linting checks..."
+        # Example: flake8 for Python
+        # flake8 .
