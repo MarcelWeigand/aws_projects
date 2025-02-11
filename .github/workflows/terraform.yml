@@ -46,7 +46,7 @@ name: 'Deploy IaC to DEV'
 
 on:
   workflow_run:
-    workflows: ["Linting"]
+    workflows: ["Linting Checks"]
     types:
       - completed
 
