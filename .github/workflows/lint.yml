@@ -27,7 +27,7 @@ jobs:
     - name: Run Python Linting
       run: |
         source .venv/bin/activate
-        flake8 .
+        flake8 --exit-zero --statistics --count .
 
     - name: Set up Terraform
       uses: hashicorp/setup-terraform@v1

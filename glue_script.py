@@ -1,7 +1,5 @@
 import sys
-from awsglue.transforms import *
 from awsglue.utils import getResolvedOptions
-from awsglue.dynamicframe import DynamicFrame
 from pyspark.context import SparkContext
 from awsglue.context import GlueContext
 from awsglue.job import Job
@@ -23,8 +21,6 @@ df.printSchema()
 
 # Show DataFrame contents
 df.show()
-
-
 
 # Commit the job
 job.commit()
