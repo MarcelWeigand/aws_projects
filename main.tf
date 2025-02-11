@@ -41,7 +41,7 @@ resource "aws_s3_bucket" "glue_job_bucket" {
 
 
 resource "aws_s3_object" "glue_script" {
-  bucket = "aws_s3_bucket.glue_job_bucket.id"
+  bucket = aws_s3_bucket.glue_job_bucket.id
   key    = "scripts/glue-script.py"
   source = "glue_script.py"
   acl    = "private"
